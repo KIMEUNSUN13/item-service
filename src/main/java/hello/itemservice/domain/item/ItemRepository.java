@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 @Repository
 public class ItemRepository {
                                                     // ConcurrentHashMap
@@ -33,5 +32,9 @@ public class ItemRepository {
         findItem.setItemName(updateParam.getItemName());
         findItem.setPrice(updateParam.getPrice());
         findItem.setQuantity(updateParam.getQuantity());
+    }
+
+    public void clearStore() {
+        store.clear();
     }
 }
